@@ -24,13 +24,19 @@
 
     <build>
         <finalName>java-hello-world</finalName>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version> <!-- Updated version -->
-            </plugin>
-        </plugins>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>  <!-- Ensure this is the latest version -->
+            <dependencies>
+                <dependency>
+                    <groupId>com.thoughtworks.xstream</groupId>
+                    <artifactId>xstream</artifactId>
+                    <version>1.4.20</version>  <!-- Newer version to fix API issue -->
+                </dependency>
+            </dependencies>
+        </plugin>
+    </plugins>    
     </build>
 </project>
